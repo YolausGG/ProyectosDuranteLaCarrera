@@ -1,0 +1,35 @@
+<html>
+
+<head>
+	<title> Juego del Dado</title>
+	<script type="text/javascript" src="dominio/index.js"></script>
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+	<h1> Gánale a la Banca </h1>
+	<table id="tabla">
+		<tr>
+			<td colspan="6"><img src="imagenes/inicio.jpg" name="miDado"></td>
+		</tr>
+		<tr>
+			<td colspan="6">
+				<input type="button" class="boton" value="COMIENZO" onclick="nuevoJUEGO();" />
+				<input type="button" class="boton" value="LANZAR DADO" onclick="lanzarDado();" />
+			</td>
+		</tr>
+		<tr>
+			<td class="banca-number">1</td>
+			<td class="banca-number">2</td>
+			<td class="banca-number">3</td>
+			<td class="banca-number">4</td>
+			<td class="banca-number">5</td>
+			<td class="banca-number">6</td>
+		</tr>
+		<tr>
+			<td colspan="6" id="resultado"></td>
+		</tr>
+	</table>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Helvetica, sans-serif;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-top: 10px;
+}
+
+#tabla {
+	margin: 20px;
+	padding: 5px;
+	border: 5px solid;
+	border-radius: 5px;
+	text-align: center;
+
+}
+
+td {
+	padding: 10px;
+}
+
+.boton {
+	border: 2px solid rgb(0, 0, 0);
+	padding: 10px;
+	color: black;
+	text-transform: uppercase;
+	border-radius: 5px;
+	background-color: rgb(253, 173, 253);
+	cursor: pointer;
+}
+
+.boton:hover {
+	filter: drop-shadow(0 2px 5px black);
+}
+
+.banca-number {
+	width: 50px;
+	height: 50px;
+	border: 2px solid black;
+	border-radius: 5px;
+}
+
+#resultado {
+	width: 50px;
+	height: 50px;
+	text-align: center;
+}
