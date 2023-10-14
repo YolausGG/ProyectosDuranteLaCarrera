@@ -1,0 +1,33 @@
+* {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+tableAsientos {
+	border-collapse: collapse;
+	border: 0;
+}
+
+td {
+	border: 1px solid;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	font-size: 14px;
+}
+
+.vacio {
+	background: violet;
+}
+
+.ocupado {
+	background: darkblue;
+	color: white;
+	border-color: inherit;
+}
