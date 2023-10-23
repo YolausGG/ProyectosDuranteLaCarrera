@@ -1,0 +1,262 @@
+<html>
+
+<head>
+	<title> Repartido 1 </title>
+
+	<style>
+		input{
+			font-size: 14px;
+		}
+	</style>
+</head>
+
+<script type="text/javascript">
+
+	function duploDelNumero() {
+		var num = parseInt(prompt("Ingrese un número"));
+		var resulatdo = num * 2;
+		alert("El duplo de " + num + " es " + resulatdo);
+	}
+
+	function diferenciaEntreNumeros() {
+		var num1 = parseInt(prompt("Ingrese el primer número"));
+		var num2 = parseInt(prompt("Ingrese el segundo número"));
+		var resultado = num1 - num2;
+		alert("La diferencia entre los dos número es " + resultado);
+	}
+
+	function sumaDeDosNumeros() {
+		var num1 = parseInt(prompt("Ingrese el primer número"));
+		var num2 = parseInt(prompt("Ingrese el segundo número"));
+		var resultado = num1 + num2;
+		alert("El resultado de la suma es " + resultado);
+	}
+
+	function numeroNegativoOPositivo() {
+		var num = parseInt(prompt("Ingrese un numero"));
+		if (num > 0) {
+			alert("El número es positivo");
+		} else {
+			alert("El número es negativo")
+		}
+	}
+
+	function numeroMayor() {
+		var num1 = parseInt(prompt("Ingrese el primer número"));
+		var num2 = parseInt(prompt("Ingrese el segundo número"));
+		if (num1 > num2) {
+			alert(num1 + " es mayor que " + num2);
+		}
+		else {
+			alert(num2 + " es mayor que " + num1);
+		}
+	}
+
+	function numeroMenor() {
+		var num1 = parseInt(prompt("Ingrese el primer número"));
+		var num2 = parseInt(prompt("Ingrese el segundo número"));
+		if (num1 < num2) {
+			alert(num1 + " es menor que " + num2)
+		}
+		else {
+			alert(num2 + " es menor que " + num1)
+		}
+	}
+
+	function division() {
+		var num1 = parseInt(prompt("Ingrese el primer número"));
+		var num2 = parseInt(prompt("Ingrese el segundo número"));
+		var resultado = num1 / num2;
+		alert(num1 + "/" + num2 + " es " + resultado);
+
+	}
+
+	function parOImpar() {
+		var valor = parseInt(prompt("Ingrese un número"));
+		if (valor % 2 == 0) {
+			alert("El numero " + valor + " es par");
+		}
+		else {
+			alert("El numero " + valor + " es impar");
+		}
+	}
+
+	function calcularRecargo() {
+		var importe = parseInt(prompt("Ingrese importe"));
+		var porcentaje = parseInt(prompt("Ingrese recargo"));
+		var recargo = (importe * porcentaje) / 100;
+		alert(importe + recargo);
+	}
+
+	function diaDeLaSemana() {
+		var num = parseInt(prompt("Escriba un núnero entre 1 y 7 inclusive"));
+		switch (num) {
+			case 1:
+				alert("Domingo");
+				break;
+			case 2:
+				alert("Lunes");
+				break;
+			case 3:
+				alert("Martes");
+				break;
+			case 4:
+				alert("Miercoles");
+				break;
+			case 5:
+				alert("Jueves");
+				break;
+			case 6:
+				alert("Viernes");
+				break;
+			case 7:
+				alert("Sabado");
+				break;
+			default:
+				alert("Se equivovó, la entrada era entre 1 y 7");
+				break;
+		}
+
+	}
+
+	function alturas() {
+		var altura = parseInt(prompt("Ingrese su altura en cm"));
+		if (altura < 151) {
+			alert("Persona de altura baja");
+		}
+		if (altura > 150 && altura < 171) {
+			alert("Persona de altura media");
+		}
+		if (altura > 171) {
+			alert("Persona alta");
+		}
+	}
+
+	function dineroGanado() {
+		var s = parseInt(prompt("Ingrese su sueldo diario"));
+		var n = parseInt(prompt("Ingrese la cantidad de días"));
+		alert("Trabajando esos dias cobraria " + s * n)
+
+	}
+
+	function numeroEntreTopes() {
+		var N = parseInt(prompt("Ingrese un número"));
+		var topeInf = parseInt(prompt("Ingrese tope inferior"));
+		var topeSup = parseInt(prompt("Ingrese tope superior"));
+		if (N > topeInf && N < topeSup) {
+			alert("Se encuentra comprendida")
+		} else
+			alert("No se encuentra entre estos limites");
+	}
+
+	function aprobadoONo() {
+		var nota1 = parseInt(prompt("Ingrese la nota de la primer prueba"));
+		var nota2 = parseInt(prompt("Ingrese la nota de la segunda prunba"));
+		var nota3 = parseInt(prompt("Ingrese la nota de la tercer prueba"));
+		var nota4 = parseInt(prompt("Ingrese la nota de la cuarta prueba"));
+		var notaFinal = nota1 + nota2 + nota3 + nota4;
+		if (notaFinal > 85) {
+			alert("Exonera")
+		}
+		if (notaFinal > 69 && notaFinal < 86) {
+			alert("Apreba");
+		}
+		if (notaFinal < 70) {
+			alert("Reprueba");
+		}
+	}
+
+	function valoresDeABC() {
+		var A = parseInt(prompt("Ingrese un valor para A"));
+		var B = parseInt(prompt("Ingrese un valor para B"));
+		var C = parseInt(prompt("Ingrese un valor para C"));
+		if (A < B && B < C) {
+			alert("" + A + " Es el menor y " + C + " el mayor");
+		}
+		if (A < C && C < B) {
+			alert("" + A + " Es el menor y " + B + " el mayor");
+		}
+		if (B < A && A < C) {
+			alert("" + B + " Es el menor y " + C + " el mayor");
+		}
+		if (B < C && C < A) {
+			alert("" + B + " Es el menor y " + A + " el mayor");
+		}
+		if (C < B && B < A) {
+			alert("" + C + " Es el menor y " + A + " el mayor");
+		}
+		if (C < A && A < B) {
+			alert("" + C + " Es el menor y " + B + " el mayor");
+		}
+		if (A == B && A == C) {
+			alert("Son todos iguales");
+		} else if (A == B || A == C || B == C) {
+			alert("Hay dos valores iguales");
+		}
+	}
+	function sumaDeLosPrimerosCienNaturales() {
+		var suma = 0;
+		for (var i = 1; i < 101; i++) {
+			suma = suma + i;
+		}
+		alert("La suma es " + suma);
+	}
+	function imprimirNumerosEnReverso() {
+		var resultado = "";
+		var num = parseInt(prompt("Ingrese numero inicial"));
+		for (var i = num; i > 0; i--) {
+			resultado += i + ", ";
+		}
+		alert(resultado);
+	}
+	function imprimirNumerosPares() {
+		var numero = 0;
+		var resultado = "";
+		var num = parseInt(prompt("Ingrese numero máximo"));
+
+		while (numero < num) {
+			if (numero % 2 == 0) {
+				resultado += numero + ",";
+			}
+			numero++;
+		}
+		alert(resultado);
+	}
+	function paresYMutiplosDeTres() {
+		var resultado = "";
+		var num = parseInt(prompt("Ingrese numero máximo"));
+		for (var i = 1; i < num; i++) {
+			if (i % 2 == 0 && i % 3 == 0)
+				resultado += i + ",";
+		}
+		alert(resultado)
+	}
+</script>
+
+
+
+<body style="background: blue; display: flex; align-items: center; flex-direction: column; gap: 5px;">
+		<h1 style="color: white;">Repartido 1</h1>
+		<input type="button" value="Duplo del Numero" onclick="duploDelNumero()"/>
+		<input type="button" value="Diferencia Entre Numeros" onclick="diferenciaEntreNumeros()"/>
+		<input type="button" value="Suma de Dos Numeros" onclick="sumaDeDosNumeros()"/>
+		<input type="button" value="Numero Negativo O Positivo" onclick="numeroNegativoOPositivo()"/>
+		<input type="button" value="Numero Mayor" onclick="numeroMayor()"/>
+		<input type="button" value="Numero Menor" onclick="numeroMenor()"/>
+		<input type="button" value="Division" onclick="division()"/>
+		<input type="button" value="Par o Impar" onclick="parOImpar()"/>
+		<input type="button" value="Calcular recargo" onclick="calcularRecargo()"/>
+		<input type="button" value="Dia de la Semana" onclick="diaDeLaSemana()"/>
+		<input type="button" value="Alturas" onclick="alturas()"/>
+		<input type="button" value="Dinero ganado" onclick="dineroGanado()"/>
+		<input type="button" value="Numero Entre Topes" onclick="numeroEntreTopes()"/>
+		<input type="button" value="Aprobado o No" onclick="aprobadoONo()"/>
+		<input type="button" value="Valores De A-B-C" onclick="valoresDeABC()"/>
+		<input type="button" value="Suma De Los Primeros Cien Naturales" onclick="sumaDeLosPrimerosCienNaturales()"/>
+		<input type="button" value="Imprimir Numeros en Reverso" onclick="imprimirNumerosEnReverso()"/>
+		<input type="button" value="Imprimir Numeros Pares" onclick="imprimirNumerosPares()"/>
+		<input type="button" value="Pares y Mutiplos de Tres" onclick="paresYMutiplosDeTres()"/>
+</body>
+
+
+</html>
