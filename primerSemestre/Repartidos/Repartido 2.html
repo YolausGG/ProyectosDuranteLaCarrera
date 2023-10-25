@@ -1,0 +1,507 @@
+<html>
+
+<head>
+	<title> Repatido 2 </title>
+
+	<style>
+		* {
+			font-family: Verdana, Geneva, Tahoma, sans-serif;
+		}
+
+		body {
+			margin-top: 1rem;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			background-color: rgb(5, 131, 1);
+			
+			color: white;
+		}
+
+		#form {
+			background-color: rgb(6, 189, 0);
+			border: 2px solid black;
+			padding: 1rem;
+		}
+
+		#form input {
+			padding: 3px;
+			text-align: center;
+			width: 170px;
+		}
+
+		#btn-limpiar {
+			display: flex;
+			justify-content: center;
+			margin-top: 5px;
+		}
+
+		#letra-repartido {
+			text-align: justify;
+			margin: 5rem;
+			padding: 1rem 2rem 0 2rem;
+			border: 3px solid black;
+			background-color: ghostwhite;
+			color: black;
+		}
+	</style>
+</head>
+
+<script type="text/javascript">
+
+
+	function eje1() {
+		var valor = parseInt(prompt("Ingrese un número"));
+		if (valor >= 10) {
+			document.formulario.resultado1.value = (valor * 3);
+		} else
+			document.formulario.resultado1.value = (valor / 4);
+	}
+	function eje2() {
+		var contador = 0;
+		var altura = 0;
+		for (var i = 1; i < 6; i++) {
+			altura = parseInt(prompt("Ingrese altura"));
+			if (altura > 200)
+				contador++;
+		}
+		alert("Cantidad de jugadores de altura mayor a 200cm : " + contador);
+	}
+	function eje3() {
+		var resultado = 0;
+
+		for (i = 1; i < 21; i++)
+			resultado = resultado + i;
+
+		document.formulario.resultado3.value = (resultado)
+	}
+	function eje4() {
+		var resultado = 1;
+		for (var i = 1; i < 16; i++) {
+			resultado = resultado * i;
+		}
+		document.formulario.resultado4.value = resultado;
+	}
+	function eje5() {
+		var contador = 0;
+		var numero = 1;
+
+		while (numero != 0) {
+			numero = parseInt(prompt("Inrgrese numeros y el 0 para finalizar"));
+			if (numero != 0 && numero > 0)
+				contador++;
+		}
+		document.formulario.resultado5.value = "Positivos: " + contador;
+	}
+	function eje6() {
+		var suma = 0;
+		for (var i = 0; i < 101; i++)
+			if (i % 2 == 0) {
+				suma = suma + i;
+			}
+		document.formulario.resultado6.value = "La suma de pares es " + suma;
+	}
+	function eje7() {
+		var num1 = parseInt(prompt("Ingrese tope Inferior"));
+		var num2 = parseInt(prompt("Ingrese tope Superior"));
+		var suma = 0;
+
+		for (var i = num1; i <= num2; i++) {
+			if (i % 2 == 1)
+				suma = suma + i;
+		}
+		document.formulario.resultado7.value = "Suma de impares es " + suma;
+	}
+	function eje8() {
+		var num = parseInt(prompt("Ingrese cantidad de cubiertas a comprar"));
+		if (num < 5)
+			document.formulario.resultado8.value = ("Debe abonar " + num * 800);
+		else
+			document.formulario.resultado8.value = ("Debe abonar " + num * 700);
+	}
+	function eje9() {
+		var otraVez = true;
+
+		while (otraVez) {
+			var edad = parseInt(prompt("Ingrese edad"));
+			var sexo = prompt("Ingrese sexo ( masculino / femenino )");
+
+			if (sexo == "femenino" || sexo == "masculino")
+				if (sexo == "femenino") {
+					var numPulsaciones = (220 - edad) / 10;
+					otraVez = false;
+				}
+				else {
+					var numPulsaciones = (210 - edad) / 10;
+					otraVez = false;
+				}
+
+			else {
+				alert("Debe ingresar femenino o masculino");
+				otraVez = true;
+			}
+		}
+		document.formulario.resultado9.value = ("Las pulsaciones " + numPulsaciones);
+	}
+	function eje10() {
+		var num1 = parseInt(prompt("Ingrese el primer valor"));
+		var num2 = parseInt(prompt("Ingrese el segundo valor"));
+		var num3 = parseInt(prompt("Ingrese el tercer valor"));
+
+		alert("El mayor numero ingresado es : " + Math.max(num1, num2, num3));
+		alert("El menor numero ingresado es : " + Math.min(num1, num2, num3));
+	}
+	function eje11() {
+		var contadorPos = 0;
+		var contadorNeg = 0;
+
+		for (var i = 0; i < 8; i++) {
+			var num = parseInt(prompt("Ingrese un valor"));
+			if (num > 0) {
+				contadorPos++;
+			}
+			else
+				contadorNeg++;
+		}
+		alert("Cantidad de positivos " + contadorPos + " ,cantidad de negativos " + contadorNeg);
+	}
+	function eje12() {
+		var contadorMay = 0;
+		var contadorMen = 0;
+
+		for (var i = 0; i < 8; i++) {
+			var num = parseInt(prompt("Ingrese valores"));
+			if (num > 100) {
+				contadorMay++;
+			}
+			else
+				contadorMen++;
+		}
+		alert("Cantidad de mayores a 100: " + contadorMay + " ,cantidad de menores a 100: " + contadorMen);
+	}
+	function eje13() {
+		var contadorAp = 0;
+		var contadorRep = 0;
+
+		for (var i = 0; i < 10; i++) {
+			var nota = parseInt(prompt("Ingrese las notas"));
+			if (nota > 70) {
+				contadorAp++;
+			}
+			else
+				contadorRep++;
+		}
+		alert("Cantidad de aprobados: " + contadorAp + " ,cantidad de resprobados: " + contadorRep);
+	}
+	function eje14() {
+		var contador = 0;
+		var num = 0;
+		while (num > -1) {
+			num = parseInt(prompt("Ingrese un numero y para finalizar uno negativo"));
+			if (num > 0)
+				contador++;
+		}
+		alert("Total de numero ingresados: " + contador);
+	}
+	function eje15() {
+		var resultado = 0;
+		for (var i = 1; i < 11; i++) {
+			var num = parseInt(prompt("Ingrese 10 numeros"));
+			if (num % 2 == 0) {
+				resultado = resultado + num;
+			}
+		}
+		alert("La suma de los numeros pares es " + resultado);
+	}
+	function eje16() {
+		var numPares = 0;
+		var numImpares = 0;
+		var contadorNumPares = 0;
+		var contadorNumImpares = 0;
+		for (var i = 0; i < 11; i++) {
+			var num = parseInt(prompt("ingrese 10 numeros"));
+			if (num % 2 == 0) {
+				(numPares = numPares + num);
+				(contadorNumPares++);
+			} else {
+				(numImpares = numImpares + num);
+				(contadorNumImpares++);
+			}
+		}
+		alert("Promedio de numeros pares es " + numPares / contadorNumPares);
+		alert("Promedio de numeros impares es " + numImpares / contadorNumImpares);
+
+	}
+	function eje17() {
+		var multiplosDe3 = 0;
+
+		for (var i = 0; i < 11; i++) {
+			var num = parseInt(prompt("Ingrese 10 numeros"));
+			if (num % 3 == 0) {
+				multiplosDe3++;
+			}
+		}
+		alert("La cantidad de numeros multiplos de 3 ingresados es " + multiplosDe3);
+	}
+	function eje18() {
+		var num = parseInt(prompt("Ingrese el total del monto a pagar"));
+		var numIngreso = parseInt(prompt("Ingrese el numero que se le otorgo al entrar"));
+
+		if (numIngreso < 101 && numIngreso > 0) {
+			if (numIngreso < 74) {
+				alert("El descuento es de $" + num * 0.15);
+			} else
+				alert("El descuento es de $" + num * 0.2);
+		}
+		else
+			alert("El numero de ingreso debe ser del 1 al 100 inclusive")
+	}
+	function eje18b() {
+
+		var descuento = 0;
+		var compra = parseInt(prompt("Ingrese compra"));
+		var numero = (Math.ceil(Math.random() * (100 - 1)) + 1);
+		if (numero < 74)
+			descuento = (compra * 15 / 100);
+		else
+			descuento = (compra * 20 / 100);
+		alert("Numero aleatorio: " + numero + " y el descuento es $" + descuento);
+	}
+	function eje19() {
+		var contadorJ = 0;
+		var contadorD = 0;
+		var minimo = 1;
+		var maximo = 7;
+
+		for (var i = 0; i < 11; i++) {
+			var dado = Math.floor(Math.random() * (maximo - minimo)) + minimo;
+			var jugador = Math.floor(Math.random() * (maximo - minimo)) + minimo;
+
+			if (dado > jugador)
+				contadorD++;
+			else if (jugador > dado)
+				contadorJ++;
+		}
+		if (contadorD < contadorJ)
+			alert("En 10 tiradas el numero del jugador fue superior al del dado en " + contadorJ + " ocasiones");
+		else
+			alert("En 10 tiradas el numero del dado fue superior al del jugador en " + contadorD + " ocasiones");
+
+	}
+	function eje20() {
+
+		var num = Math.floor(Math.random() * (11 - 1)) + 1;
+		if (num > 7)
+			alert("Mi numero fue " + num + " ¡Hoy estoy con suerte!");
+		else if (num < 7 && num > 3)
+			alert("Mi numero fue " + num + " ¡Tengo suerte media!");
+		else
+			alert("Mi numero fue " + num + " ¡Qué mala suerte tengo hoy!");
+	}
+
+
+</script>
+
+<body>
+
+	<form id="form" name="formulario">
+		<fieldset>
+			<legend>RESPARTIDO 2</legend>
+
+			<table>
+				<tr>
+					<td>Ejercicio 1</td>
+					<td><input type="button" value="Ejercicio  1 " onclick="eje1();"></td>
+					<td><input type="text" id="resultado1"></td>
+				</tr>
+				<tr>
+					<td>Ejercicio 2</td>
+					<td><input type="button" value="Ejercicio  2 " onclick="eje2();"></td>
+				</tr>
+				<tr>
+					<td>Ejercicio 3</td>
+					<td><input type="button" value="Ejercicio  3 " onclick="eje3();"></td>
+					<td><input type="text" id="resultado3"></td>
+				</tr>
+				<tr>
+					<td>Ejercicio 4</td>
+					<td><input type="button" value="Ejercicio  4 " onclick="eje4();"></td>
+					<td><input type="text" id="resultado4"></td>
+				</tr>
+				<tr>
+					<td>Ejercicio 5</td>
+					<td><input type="button" value="Ejercicio  5 " onclick="eje5();"></td>
+					<td><input type="text" id="resultado5"></td>
+				</tr>
+				<tr>
+					<td>Ejercicio 6</td>
+					<td><input type="button" value="Ejercicio  6 " onclick="eje6();"></td>
+					<td><input type="text" id="resultado6"></td>
+				</tr>
+				<tr>
+					<td>Ejecricio 7</td>
+					<td><input type="button" value="Ejercicio  7 " onclick="eje7();"></td>
+					<td><input type="text" id="resultado7"></td>
+				</tr>
+				<tr>
+					<td>Ejercicio 8</td>
+					<td><input type="button" value="Ejercicio  8 " onclick="eje8();"></td>
+					<td><input type="text" id="resultado8"></td>
+				</tr>
+				<tr>
+					<td>Ejercicio 9</td>
+					<td><input type="button" value="Ejercicio  9 " onclick="eje9();"></td>
+					<td><input type="text" id="resultado9"></td>
+				</tr>
+				<tr>
+					<td>Ejercicio 10</td>
+					<td><input type="button" value="Ejercicio 10" onclick="eje10();"></td>
+				</tr>
+				<tr>
+					<td>Ejercicio 11</td>
+					<td><input type="button" value="Ejercicio 11" onclick="eje11();"></td>
+				</tr>
+				<tr>
+					<td>Ejercicio 12</td>
+					<td><input type="button" value="Ejercicio 12" onclick="eje12();"></td>
+				</tr>
+				<tr>
+					<td>Ejercicio 13</td>
+					<td><input type="button" value="Ejercicio 13" onclick="eje13();"></td>
+				</tr>
+				<tr>
+					<td>Ejercicio 14</td>
+					<td><input type="button" value="Ejercicio 14" onclick="eje14();"></td>
+				</tr>
+				<tr>
+					<td>Ejercicio 15</td>
+					<td><input type="button" value="Ejercicio 15" onclick="eje15();"></td>
+				</tr>
+				<tr>
+					<td>Ejercicio 16</td>
+					<td><input type="button" value="Ejercicio 16" onclick="eje16();"></td>
+				</tr>
+				<tr>
+					<td>Ejercicio 17</td>
+					<td><input type="button" value="Ejercicio 17" onclick="eje17();"></td>
+				</tr>
+				<tr>
+					<td>Ejercicio 18</td>
+					<td><input type="button" value="Ejercicio 18" onclick="eje18();"></td>
+				</tr>
+				<tr>
+					<td>Ejercicio 18b</td>
+					<td><input type="button" value="Ejercicio 18b" onclick="eje18b();"></td>
+				</tr>
+				<tr>
+					<td>Ejercicio 19</td>
+					<td><input type="button" value="Ejercicio 19" onclick="eje19();"></td>
+				</tr>
+				<tr>
+					<td>Ejercicio 20</td>
+					<td><input type="button" value="Ejercicio 20" onclick="eje20();"></td>
+				</tr>
+
+			</table>
+			<div id="btn-limpiar">
+				<input type="reset" value="Limpiar Entradas">
+			</div>
+		</fieldset>
+	</form>
+
+	<div id="letra-repartido">
+		<p>
+			1- Escriba un programa que lea un número y si este es mayor o igual a 10 devuelva el triple de este de
+			lo
+			contrario la cuarta parte de este.
+		</p>
+		<p>
+			2- Escribe un programa que permita el ingreso de 12 jugadores de básquet y mostrar cuántos de ellos su
+			altura fue mayor a 200 cm.
+		</p>
+		<p>
+			3- Escriba un programa que calcule la suma de los números enteros entre 1 y 20 (1+2+3+4....)
+		</p>
+		<p>
+			4- Escriba un programa que calcule el producto números enteros del 1 al 15 (1*2*3...)
+
+		</p>
+		<p>
+			5- Programa: usuario introduce números hasta introducir el 0 y el ordenador muestra la cantidad de
+			números
+			positivos.
+		</p>
+		<p>
+			6- Realizar la suma de todos los números pares entre 2 y 100.
+		</p>
+		<p>
+			7- Escribir un programa que permite ingresar dos números y muestre la suma de todos los números impares
+			que
+			hay entre estos números.
+		</p>
+		<p>
+			8- Calcular el total que una persona debe pagar en una gomería, si el precio de cada cubierta es de $800
+			si
+			se compran menos de 5 cubiertas y de $700 si se compran 5 o más.
+		</p>
+		<p>
+			9- Calcular el número de pulsaciones que debe tener una persona por cada 10 segundos de ejercicio
+			aeróbico;
+			la fórmula que se aplica cuando el sexo es femenino es: num_pulsaciones = (220 − edad)/10 y si el sexo
+			es
+			masculino: num_pulsaciones = (210 − edad)/10
+		</p>
+		<p>
+			10- Leer tres números e imprimir el mayor de ellos
+		</p>
+		<p>
+			11- Construya un algoritmo que permita leer una cantidad de 20 números y nos indique finalmente cuantos
+			fueron positivos y cuantos fueron negativos.
+		</p>
+		<p>
+			12- Construya un algoritmo que permita ingresar 25 números y nos indique cuantos fueron mayores a 100 y
+			cuántos menores a 100.
+		</p>
+		<p>
+			13- Construya un algoritmo que permita ingresar 10 notas entre uno y 100, indicando finalmente cuántos
+			alumnos aprobaron y cuantos reprobaron. Para aprobar la nota debe ser superior a 70.
+		</p>
+		<p>
+			14- Construya un algoritmo que permita leer una cantidad variable de números hasta que se ingrese un
+			número
+			negativo. Indicar cantidad total de números ingresados.
+		</p>
+		<p>
+
+			15- Leer 10 números e indicar cuánto suman los números pares.
+		</p>
+		<p>
+			16- Leer 20 números e indicar el promedio de los números pares y el promedio de los números impares.
+		</p>
+		<p>
+			17- Leer 20 números e indicar cuántos múltiplos de 3 fueron ingresados.
+		</p>
+		<p>
+			18- En un supermercado se hace una promoción, mediante la cual el cliente obtiene un descuento
+			dependiendo
+			de un número que le toca al azar cuando ingresa al local. El al azar está comprendido entre 1 y 100
+			inclusive. Si el numero escogido es menor que 74 la compra tiene un descuento del 15%, si el número es
+			mayor
+			o igual a 74 el descuento es del 20%. Mostrar cuánto dinero se le descuenta.
+		</p>
+		<p>
+			19- Escribe un programa que realice “tiradas” de dos números aleatorios entre 1 y 6 inclusive. El primer
+			número identifica a un “dado” y el segundo número identifica a un “jugador”. En diez “tiradas” mostrar
+			cuantas veces el número definido como el del “jugador” fue superior al número definido como “dado”.
+		</p>
+		<p>
+			20- Escriba un programa que genere un número aleatorio entre 1 y 10 inclusive. Si el número es mayor a 7
+			deberá mostrar el siguiente mensaje: “Hoy estoy con suerte”, si el número está entre 4 y 6 inclusive
+			mostrar
+			mensaje:” Tengo suerte media.”. Sino el mensaje deberá decir: “Que mala suerte tengo hoy!”.
+		</p>
+	</div>
+</body>
+
+</html>
