@@ -1,0 +1,155 @@
+<html>
+	<head><title> Señal de Ajuste </title></head>
+	
+	<script type="text/javascript">
+	
+	function eje1(){
+		var name = prompt("Ingrese un nombre");
+		if(name == "Ramón")
+			alert("Felicidades por su regreso");
+		else
+			alert("No era Ramón!");
+	}
+	function eje2(){
+		var pais = prompt("Ingrese un pais");
+		if(pais != "uruguay")
+			alert("El pais es "+pais+" y tiene "+pais.length+" caracteres")
+	}
+	function eje3(){
+		var numMes = parseInt(prompt("Ingrese el numero del mes"));
+		var resultado = 0;
+		resultado = 12 - numMes;
+		alert("Para fin de año faltan "+resultado+" meses");
+	}
+	function eje4(){
+		var num = parseInt(prompt("Ingrese un numero"));
+		if(num %3 == 0)
+			alert("El numero "+num+" es multiplo de 3");
+		else
+			alert("El numero "+num+" no es multiplo de 3");
+	}
+	function eje5(){
+		var num = parseInt(prompt("Ingrese un numero de mes"));
+		
+		switch(num){
+		case 1: alert("Enero");
+			break;
+		case 2: alert("Febrero");
+			break;
+		case 3: alert("Marzo");
+			break;
+		case 4: alert("Abril");
+			break;
+		case 5: alert("Mayo");
+			break;
+		case 6: alert("Junio");
+			break;
+		case 7: alert("Julio");
+			break;
+		case 8: alert("Agosto");
+			break;
+		case 9: alert("Setiembre");
+			break;
+		case 10: alert("Octubre");
+			break;
+		case 11: alert("Noviembre");
+			break;
+		case 12: alert("Diciembre");
+			break;
+		default: alert("Debe ingresar un numero entre 1 y 12");
+			break;
+		}
+	}
+	function eje6(){
+		var num1 = parseInt(prompt("Ingrese un numero"));
+		var num2 = parseInt(prompt("Ingrese un numero"));
+		var num3 = parseInt(prompt("Ingrese un numero"));
+		
+		alert("El numero menor es "+Math.min(num1,num2,num3));
+	}
+	function eje7(){
+		var name1 = prompt("Ingrese un nombre");
+		var name2 = prompt("Ingrese un nombre");
+	
+		if(name1.length < name2.length)
+			alert(name1+" "+name2);
+		else
+			alert(name2+" "+name1);
+	}
+	function eje8(){
+		var name1 = prompt("Ingrese el nombre");
+		var edad1 = parseInt(prompt("Ingrese la edad"));
+		var name2 = prompt("Ingrese el nombre de otra persona");
+		var edad2 = parseInt(prompt("Ingrese la edad"));
+		
+		if(edad1 > edad2)
+			alert("El mayor es "+name1);
+		else
+			alert("El mayor es "+name2)
+	}
+	function eje9(){
+		var materia1 = parseInt(prompt("ingrese la nota de la primer materia"));
+		var materia2 = parseInt(prompt("ingrese la nota de la segunda materia"));
+		var materia3 = parseInt(prompt("ingrese la nota de la tercer materia"));
+		var materia4 = parseInt(prompt("ingrese la nota de la cuarta materia"));
+		var resultado = 0;
+		var suma = 0;
+		
+		suma = materia1+materia2+materia3+materia4;
+		resultado = suma/4;
+		
+		alert("La suma de todas es "+suma+" y la media de las notas es "+resultado);
+	}
+	function eje10(){
+		var frase = prompt("Ingrese una texto");
+		var contador = 0;
+		
+		for(var i=0; i<frase.length; i++){
+			if(frase.charAt(i) == "B" || frase.charAt(i) == "b")
+				contador++;
+		}
+		alert("Cantidad de veces que hay una 'B' ó 'b' es "+contador);
+	}
+	function eje11(){
+		var frase = prompt("Ingrese una texto");
+		if(frase.length > 20)
+			alert("La frase es"+frase+" ya letra en ña posición 10 es "+frase.charAt(10));
+	}
+	function eje12(){
+		var resultado = "";
+		
+		for(var i=2; i<51; i++){
+			if(i %2 == 0 && i != 20)
+				resultado = resultado + i +", ";
+		}
+		alert(resultado);
+	}
+	function eje13(){
+		var resultado = "";
+		
+		for(var i=51; i>0; i--){
+			if(i %2 == 0 && i != 22)
+				resultado = resultado + i +", ";
+		}
+		alert(resultado);
+	}
+	</script>
+	
+	<body>
+		<input type="button" value="Ejercicio 1" onclick="eje1();"/>
+		<input type="button" value="Ejercicio 2" onclick="eje2();"/>
+		<input type="button" value="Ejercicio 3" onclick="eje3();"/>
+		<input type="button" value="Ejercicio 4" onclick="eje4();"/>
+		<input type="button" value="Ejercicio 5" onclick="eje5();"/>
+		<input type="button" value="Ejercicio 6" onclick="eje6();"/>
+		<input type="button" value="Ejercicio 7" onclick="eje7();"/>
+		<input type="button" value="Ejercicio 8" onclick="eje8();"/>
+		<input type="button" value="Ejercicio 9" onclick="eje9();"/>
+		<input type="button" value="Ejercicio 10" onclick="eje10();"/>
+		<input type="button" value="Ejercicio 11" onclick="eje11();"/>
+		<input type="button" value="Ejercicio 12" onclick="eje12();"/>
+		<input type="button" value="Ejercicio 13" onclick="eje13();"/>
+		<input type="button" value="Ejercicio 14" onclick="eje14();"/>
+
+	</body>
+</html>

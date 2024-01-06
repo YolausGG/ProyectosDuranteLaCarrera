@@ -1,0 +1,207 @@
+<html>
+	<head><title> Repartido 5 </title></head>
+	
+	<script type="text/javascript">
+	
+	function eje1(){
+		var nombres = new Array();
+		nombres[0] = prompt("Ingrese el primer nombre");
+		nombres[1] = prompt("Ingrese el nombre");
+		nombres[2] = prompt("ingrese tercer nombre");
+		
+		alert(nombres)
+	}
+	function eje2(){
+		var colores = new Array("amarillo","negro","verde","azul");
+		
+		alert(colores)
+		colores.splice(0,1)
+		alert(colores)
+		colores.splice(0,0,"blanco")
+		alert(colores)
+	}
+	function eje3(){
+		var ciudades = new Array("Artígas","Rocha","Maldonado","Rivera");
+		
+		alert(ciudades);
+		ciudades.push("Rosario");
+		alert(ciudades);
+		ciudades.splice(3,1);
+		alert(ciudades);
+		ciudades.splice(2,2,"Rosario","Nueva Helvecia");
+		alert(ciudades);
+		ciudades.sort();
+		alert(ciudades);
+		ciudades.reverse();
+		alert(ciudades);	
+	}
+	function eje4(){
+		var numeros = new Array();
+		var suma = 0;
+		
+		for(var i=0; i<10; i++){
+			numeros[i] = parseInt (prompt("Ingrese valores"));
+		}
+		
+		for(var i=0; i<10; i++){
+			suma = suma + numeros[i];
+		}
+		
+		alert("La suma de los valores del array: "+numeros+" es "+suma);
+	}
+	function eje5(){
+		var enteros = new Array();
+		var resultado = 0;
+		enteros[0] = parseInt(prompt("Ingrese el primer entero"));
+		enteros[1] = parseInt(prompt("Ingrese el segundo entero"));
+		enteros[2] = parseInt(prompt("ingrese el tercer entero"));
+		enteros[3] = parseInt(prompt("ingrese el cuarto entero"));
+		enteros[4] = parseInt(prompt("ingrese el quinto entero"));
+
+		for(var i = 0; i <enteros.length; i++){
+			resultado += enteros[i]; 
+		}
+		alert("La media de los enteros ingresados es: "+resultado/enteros.length);
+	}
+	function eje6(){
+		var partes = new Array();
+		var text = prompt("Ingrese un texto");
+		
+		partes = text.split(" ");
+		
+		alert("Primera parte: "+partes[0]+" >>> segunda parte: "+partes[1]);	
+	}
+	function eje7(){
+
+		var numeros = new Array ();
+		var resultado = 0;
+		for (var i=0; i<10; i++) {
+				numeros[i] = parseInt(prompt("Ingrese valores"));
+			if(i % 2 !== 0){
+				resultado = resultado + numeros[i];
+				
+			}
+		}
+		alert("El promedio de los numeros en las posicines impares es "+resultado/(numeros.length/2));
+	}
+
+	function eje8(){
+		var numeros = new Array();
+		var resultado = 0;
+		for(var i = 0; i<50; i++){
+			numeros[i] = (Math.floor(Math.random() * (9999 - 1)) + 1)
+			if(numeros[i] >= numeros[resultado]){
+				resultado = i;
+			}				
+		}
+		alert("El numero mayor es "+numeros[resultado]);
+	}
+	
+	function eje9(){
+
+		var numeros = new Array ();
+		var resultado = 0;
+		var n = 0;
+		for (var i=0; i<50; i++){
+			n = (Math.floor(Math.random() * (100 - 1)) + 1);
+			if(n %2 == 0){
+				resultado = resultado + n;
+				
+			}
+		}
+		alert("El suma es: "+resultado);
+	}
+	function eje10(){
+		var numeros = new Array(25,80,235,100);
+		
+		alert(numeros);
+		
+		numeros.push(numeros[0]);
+		numeros.splice(0,1);
+		alert(numeros);
+		
+	}
+	function eje11(){
+		var  array1 = new Array(25,80,235);
+		var  array2 = new Array(27,62,51);
+		var  array3 = new Array();
+		
+		for(i = 0; i< array2.length; i++){
+			
+			array3.push(array1[i]);
+			array3.push(array2[i]);
+		}
+		alert("Array 1: "+array1+"\nArray 2: "+array2+"\nArray 3: "+array3);
+	}
+	function eje12(){
+	var resultado = "";
+		var primeraEtapa = new Array(" Carlos", " Enrique", " Raúl", " Mathías", " Nicolás", " Antonio", " Mario", " Juan Manuel", " Pablo", " Mauricio");
+		
+		for(var i=0; i<primeraEtapa.length; i++){
+		
+			resultado += i+1 +":"+primeraEtapa[i]+" ";
+		
+		};
+		alert("Primera etapa: "+resultado);
+		resultado = "";
+		
+		primeraEtapa.push(primeraEtapa[1]);
+		primeraEtapa.splice(0,0," Raúl");
+		primeraEtapa.splice(2,2);
+		primeraEtapa.splice(1,0," Nicolás");
+		primeraEtapa.splice(4,1);
+		
+		for(var i=0; i<primeraEtapa.length; i++){
+		
+			resultado += i+1 +":"+primeraEtapa[i]+" ";
+		
+		};
+		alert("Segunda etapa: "+resultado);
+		resultado = "";
+		
+		primeraEtapa.splice(0,1);
+		primeraEtapa.splice(3,1);
+		primeraEtapa.push(" Marcos");
+		primeraEtapa.push(" Odín");
+		
+		for(var i=0; i<primeraEtapa.length; i++){
+		
+			resultado += i+1 +":"+primeraEtapa[i]+" ";
+		
+		};
+		alert("Tercera etapa: "+resultado);
+		resultado = "";
+		
+		primeraEtapa.splice(8,1);
+		primeraEtapa.splice(0,0," Marcos");
+		primeraEtapa.splice(8,1, " Jacinto");
+		
+		for(var i=0; i<primeraEtapa.length; i++){
+		
+			resultado += i+1 +":"+primeraEtapa[i]+" ";
+		
+		};
+		alert("Final "+resultado)
+			
+	}
+	
+
+	
+	
+	</script>
+
+	<body>	
+		<input type="button" value="Ejercicio 1" onclick="eje1();"/>
+		<input type="button" value="Ejercicio 2" onclick="eje2();"/>
+		<input type="button" value="Ejercicio 3" onclick="eje3();"/>
+		<input type="button" value="Ejercicio 4" onclick="eje4();"/>
+		<input type="button" value="Ejercicio 5" onclick="eje5();"/>
+		<input type="button" value="Ejercicio 6" onclick="eje6();"/>
+		<input type="button" value="Ejercicio 7" onclick="eje7();"/>
+		<input type="button" value="Ejercicio 8" onclick="eje8();"/>
+		<input type="button" value="Ejercicio 9" onclick="eje9();"/>
+		<input type="button" value="Ejercicio 10" onclick="eje10();"/>
+		<input type="button" value="Ejercicio 11" onclick="eje11();"/>
+		<input type="button" value="Ejercicio 12" onclick="eje12();"/>
+	</body>
+</html>
