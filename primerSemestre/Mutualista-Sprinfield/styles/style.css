@@ -1,0 +1,75 @@
+body {
+	text-align: center;
+	background-color: wheat;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {}
+
+h1 {
+	font-size: larger;
+}
+
+nav {
+	display: flex;
+	justify-content: center;
+}
+
+nav a {
+	background-color: wheat;
+	border-bottom: 4px solid green;
+	display: block;
+	padding: 8px 16px;
+}
+
+nav a[href] {
+	background-color: transparent;
+}
+
+main {
+	display: flex;
+	justify-content: center;
+	margin: 16px;
+}
+
+form {
+	margin: 8px 32px;
+}
+
+h2 {
+	border-bottom: 2px solid maroon;
+	font-size: inherit;
+	margin: 0;
+	padding: 8px;
+}
+
+table {
+	border-spacing: 4px;
+	padding: 4px;
+	width: 100%;
+}
+
+.botones {
+	border-bottom: 2px solid maroon;
+	padding: 0 8px 8px;
+}
+
+.botones input {
+	padding: 4px 8px;
+}
+
+.lista {
+	padding: 8px;
+	gap: 5px;
+}
+
+.lista p {
+	margin: 0 0 8px;
+}
+
+select {
+	width: 100%;
+}

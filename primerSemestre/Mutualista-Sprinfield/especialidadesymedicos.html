@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Mutualista</title>
+	<link rel="stylesheet" href="styles/style.css">
+	<script src="dominio/JQuery.js"></script>
+	<script src="dominio/especialidades.js"></script>
+	<script src="dominio/medicos.js"></script>
+	<script>
+		function inicializar() {
+			especialidades_inicializar();
+			especialidades_listar();
+
+			medicos_inicializar();
+			medicos_listar();
+		}
+	</script>
+</head>
+
+<body onload="inicializar()">
+	<header>
+		<h1>Mutualista</h1>
+		<nav>
+			<a href="inicio.html"> Inicio </a>
+			<a> Especialidades y Médicos</a>
+			<a href="pacientesyconsultas.html">Pacientes y Consultas </a>
+			<a href="estadisticas.html"> Estadísticas </a>
+		</nav>
+	</header>
+	<main>
+
+		<form>
+			<h2>ABM Especialidades</h2>
+			<table>
+				<tr>
+					<td>Id: </td>
+					<td><input type="number" id="especialidad_id"> </td>
+				</tr>
+				<tr>
+					<td>Nombre:</td>
+					<td><input type="text" id="especialidad_nombre"></td>
+				</tr>
+			</table>
+			<div class="botones">
+				<input type="button" value="Reset" onclick="especialidades_limpiarCampos()">
+				<input type="button" value="Alta" onclick="especialidades_alta()">
+				<input type="button" value="Baja" onclick="especialidades_baja()">
+				<input type="button" value="Modificar" onclick="especialidades_modificar()">
+			</div>
+			<div class="lista">
+				<p>Lista de especialidades:</p>
+				<select id="especialidades_lista" class="lista" size="6"
+					onclick="especialidades_seleccionar()"></select>
+			</div>
+			<div class="botones">
+				<input type="button" value="Ingreso Original" onclick="inicializar()">
+				<input type="button" value="Ordenado por Nombre" onclick="especialidades_Ordenadas()">
+			</div>
+
+		</form>
+
+		<form>
+			<h2>ABM Médicos</h2>
+
+			<table>
+				<tr>
+					<td>Id: </td>
+					<td><input type="number" id="medico_id"> </td>
+				</tr>
+				<tr>
+					<td>Nombre: </td>
+					<td><input type="text" id="medico_nombre"> </td>
+				</tr>
+				<tr>
+					<td>Especialidad:</td>
+					<td><select id="medico_especialidad"></select></td>
+				</tr>
+			</table>
+			<div class="botones">
+				<input type="button" value="Reset" onclick="medicos_limpiarCampos()">
+				<input type="button" value="Alta" onclick="medicos_alta()">
+				<input type="button" value="Baja" onclick="medicos_baja()">
+				<input type="button" value="Modificar" onclick="medicos_modificar()">
+			</div>
+			<div class="lista">
+				<p>Lista de médicos:</p>
+				<select id="medicos_lista" class="lista" size="6" onclick="medicos_seleccionar()"></select>
+			</div>
+		</form>
+
+	</main>
+</body>
+
+</html>

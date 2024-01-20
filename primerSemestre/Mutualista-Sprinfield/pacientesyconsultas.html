@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Mutualista</title>
+	<link rel="stylesheet" href="styles/style.css">
+
+	<script src="dominio/JQuery.js"></script>
+	<script src="dominio/especialidades.js"></script>
+	<script src="dominio/medicos.js"></script>
+	<script src="dominio/pacientes.js"></script>
+	<script src="dominio/consultas.js"></script>
+	<script>
+		function inicializar() {
+			especialidades_inicializar();
+			medicos_inicializar();
+			pacientes_inicializar();
+			consultas_inicializar();
+
+			pacientes_listar();
+			medicosConsulta_listar();
+			consultas_listar();
+		}
+	</script>
+</head>
+
+<body onload="inicializar()">
+	<header>
+		<h1>Mutualista</h1>
+		<nav>
+			<a href="inicio.html"> Inicio </a>
+			<a href="especialidadesymedicos.html">Especialidades y Médicos</a>
+			<a> Pacientes y Consultas </a>
+			<a href="estadisticas.html"> Estadísticas </a>
+		</nav>
+	</header>
+	<main>
+
+		<form>
+			<h2>ABM Pacientes</h2>
+			<table>
+				<tr>
+					<td>Id: </td>
+					<td><input type="number" id="paciente_id"> </td>
+				</tr>
+				<tr>
+					<td>Nombre:</td>
+					<td><input type="text" id="paciente_nombre"></td>
+				</tr>
+			</table>
+			<div class="botones">
+				<input type="button" value="Reset" onclick="pacientes_limpiarCampos()">
+				<input type="button" value="Alta" onclick="pacientes_alta()">
+				<input type="button" value="Baja" onclick="pacientes_baja()">
+				<input type="button" value="Modificar" onclick="pacientes_modificar()">
+			</div>
+			<div class="lista">
+				<p>Lista de pacientes:</p>
+				<select id="pacientes_lista" class="lista" size="6" onclick="pacientes_seleccionar()"></select>
+			</div>
+		</form>
+
+		<form>
+			<h2>ABM Consultas</h2>
+			<table>
+				<tr>
+					<td>Id: </td>
+					<td><input type="number" id="consulta_id"> </td>
+				</tr>
+				<tr>
+					<td>Paciente:</td>
+					<td><select id="consulta_paciente"></select></td>
+				</tr>
+				<tr>
+					<td>Médico: </td>
+					<td><select id="consulta_medico"> </select></td>
+				</tr>
+				<tr>
+					<td>Fecha: </td>
+					<td><input type="date" id="consulta_fecha"> </td>
+				</tr>
+				<tr>
+					<td>Turno: </td>
+					<td><input type="number" id="consulta_turno"> </td>
+				</tr>
+			</table>
+			<div class="botones">
+				<input type="button" value="Reset" onclick="consultas_limpiarCampos()">
+				<input type="button" value="Alta" onclick="consultas_alta()">
+				<input type="button" value="Baja" onclick="consultas_baja()">
+				<input type="button" value="Modificar" onclick="consultas_modificar()">
+			</div>
+			<div class="lista">
+				<p>Lista de consultas:</p>
+				<select id="consultas_lista" class="lista" size="6" onclick="consultas_seleccionar()"></select>
+			</div>
+		</form>
+
+	</main>
+</body>
+
+</html>

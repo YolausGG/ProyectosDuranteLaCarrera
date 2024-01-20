@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Mutualista</title>
+	<link rel="stylesheet" href="styles/style.css">
+	<script src="dominio/JQuery.js"></script>
+	<script src="dominio/especialidades.js"></script>
+	<script src="dominio/medicos.js"></script>
+	<script src="dominio/pacientes.js"></script>
+	<script src="dominio/consultas.js"></script>
+	<script src="dominio/estadisticas.js"></script>
+</head>
+
+<body onload="inicializar()">
+	<header>
+		<h1>Mutualista</h1>
+		<nav>
+			<a href="inicio.html"> Inicio </a>
+			<a href="especialidadesymedicos.html">Especialidades y Médicos</a>
+			<a href="pacientesyconsultas.html"> Pacientes y Consultas </a>
+			<a> Estadísticas </a>
+		</nav>
+	</header>
+	<main>
+
+		<form>
+			<h2>Ejercicio 1</h2>
+			<table>
+				<tr>
+					<td colspan="2">Dado un paciente, mostrar la fecha y el turno que tiene</td>
+				</tr>
+				<tr>
+					<td>Paciente:</td>
+					<td><select id="pacientes"></select></td>
+				</tr>
+			</table>
+			<div class="botones">
+				<input type="button" value="Averiguar" onclick="ejercicio1()">
+			</div>
+			<div>
+				<p id="ejercicio1"></p>
+			</div>
+		</form>
+
+		<form>
+			<h2>Ejercicio 2</h2>
+			<table>
+				<tr>
+					<td colspan="2">Dado un médico, mostrar todos los pacientes que atiende</td>
+				</tr>
+				<tr>
+					<td>Médico:</td>
+					<td><select id="medicos"></select></td>
+				</tr>
+			</table>
+			<div class="botones">
+				<input type="button" value="Averiguar" onclick="ejercicio2()">
+			</div>
+			<div>
+				<p id="ejercicio2"></p>
+			</div>
+		</form>
+
+	</main>
+	<main>
+		<form>
+			<h2>Ejercicio 3</h2>
+			<table>
+				<tr>
+					<td colspan="2">
+						Dado un turno mostrar la lista de pacientes que tienen consulta.
+					</td>
+				</tr>
+				<tr>
+					<td>Turno:</td>
+					<td><select id="turno">
+							<option>1</option>
+							<option>2</option>
+						</select></td>
+				</tr>
+			</table>
+			<div class="botones">
+				<input type="button" value="Averiguar" onclick="ejercicio3()">
+			</div>
+			<div>
+				<p id="ejercicio3"></p>
+			</div>
+		</form>
+		<form>
+			<h2>Ejercicio 4</h2>
+			<table>
+				<tr>
+					<td colspan="2">
+						Mostrar la especialidad que más consulta tiene.
+					</td>
+				</tr>
+
+			</table>
+			<div class="botones">
+				<input type="button" value="Averiguar" onclick="ejercicio4()">
+			</div>
+			<div>
+				<p id="ejercicio4"></p>
+			</div>
+		</form>
+	</main>
+</body>
+
+</html>
