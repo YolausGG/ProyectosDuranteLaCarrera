@@ -1,401 +1,439 @@
 <html>
-	<head>
-		<title> Repatido 3 </title>
-	</head>
+
+<head>
+	<title> Repatido 3 </title>
+
 
 	<script type="text/javascript">
-	
-	function eje1(){
-		var texto = prompt ("Ingrese una frase");
-			alert(texto + " la cantidad de caracteres es: "+texto.length);
-	}
-	function eje2(){
-		var texto = prompt ("Ingrese un texto");
-		var resultado = "";
-		
-		for(var i = 0; i<texto.length; i++){
-			if(texto.charAt(i) != " ")
-				resultado += texto.charAt(i);
-			else
-				resultado += "*";
+
+		function eje1() {
+			var texto = prompt("Ingrese una frase");
+			alert(texto + " la cantidad de caracteres es: " + texto.length);
 		}
-		alert(resultado);
-	}
-	function eje3(){
-		var texto = prompt ("Ingrese un texto");
-		var contador = 0;
-		
-		for(var i = 0; i<texto.length; i++){
-			if(texto.charAt(i) == "a" || texto.charAt(i) == "A")
-				contador++;
+		function eje2() {
+			var texto = prompt("Ingrese un texto");
+			var resultado = "";
+
+			for (var i = 0; i < texto.length; i++) {
+				if (texto.charAt(i) != " ")
+					resultado += texto.charAt(i);
+				else
+					resultado += "*";
+			}
+			alert(resultado);
 		}
-		alert("La cantidad de letras a y A es "+contador);
-	}
-	function eje4(){
-		var contadorP = 1;
-		var texto = prompt ("Ingrese un texto")
-		
-		for(var i = 0; i<texto.length; i++){
-			if(texto.charAt(i) == " ")
-				contadorP++;
+		function eje3() {
+			var texto = prompt("Ingrese un texto");
+			var contador = 0;
+
+			for (var i = 0; i < texto.length; i++) {
+				if (texto.charAt(i) == "a" || texto.charAt(i) == "A")
+					contador++;
+			}
+			alert("La cantidad de letras a y A es " + contador);
 		}
-		alert(texto + " contiene "+contadorP+" palabras")
-	}
-	function eje5(){
-		var text1 = prompt("Ingrese el primer texto");
-		var text2 = prompt("Ingrese el segundo texto");
-		
-		alert(text1.concat(" "+text2));
-	}
-	function eje6(){
-	var contador = 0;
-	var texto = prompt("ingrese un texto");
-		for(var i=0 ; i<texto.length ; i++){
-			if(texto.charAt(i) == "A" || texto.charAt(i)== "a" || texto.charAt(i)== "E" || texto.charAt(i)== "e" || texto.charAt(i)== "I" || texto.charAt(i)== "i" || texto.charAt(i)== "O" || texto.charAt(i)== "o" || texto.charAt(i)== "U" || texto.charAt(i)== "u") 
-				contador++;
+		function eje4() {
+			var contadorP = 1;
+			var texto = prompt("Ingrese un texto")
+
+			for (var i = 0; i < texto.length; i++) {
+				if (texto.charAt(i) == " ")
+					contadorP++;
+			}
+			alert(texto + " contiene " + contadorP + " palabras")
 		}
-		alert("la cantidad de letras vocales es " + contador);
-	}
-	function eje7(){
-		var texto = prompt ("Ingrese un texto");
-		var letra = prompt ("ingrese una letra")
-		var contador = 0;
-		
-		for(var i = 0; i<texto.length; i++){
-			if(texto.charAt(i) == letra )
-				contador++;
+		function eje5() {
+			var text1 = prompt("Ingrese el primer texto");
+			var text2 = prompt("Ingrese el segundo texto");
+
+			alert(text1.concat(" " + text2));
 		}
-		alert("La cantidad de letras "+letra+" es "+contador);
-	}
-	function eje8(){
-		var text = "Esta lloviendo en Juan Lacaze";
-		alert(text.substring(23,29));
-	}
-	function eje9(){
-		var text = "Jose Artigas";
-		var nombre = text.split(" ")
-		
-		alert(nombre[1]+", "+nombre[0]);
-	}
-	function eje10(){
-		var contador = 0;
-		
-		while(text != "fin"){
-			var text = prompt("Ingrese frases");
-			if(text != "fin")
-				contador++;
+		function eje6() {
+			var contador = 0;
+			var texto = prompt("ingrese un texto");
+			for (var i = 0; i < texto.length; i++) {
+				if (texto.charAt(i) == "A" || texto.charAt(i) == "a" || texto.charAt(i) == "E" || texto.charAt(i) == "e" || texto.charAt(i) == "I" || texto.charAt(i) == "i" || texto.charAt(i) == "O" || texto.charAt(i) == "o" || texto.charAt(i) == "U" || texto.charAt(i) == "u")
+					contador++;
+			}
+			alert("la cantidad de letras vocales es " + contador);
 		}
-		alert("Usted Ingerso: "+contador+ " frases");
-	}
-	function eje11(){
-		var num = prompt("Ingrese su numero");
-		if(num.length == 3){
-			alert("El valor ingresado es de 3 digitos");
-		}else
-			alert("El numer ingresado no tiene 3 digitos");
-	}
-	
-	function absoluto() {
-		var num = parseFloat(prompt("Ingrese número deseado"));
-		
-				document.formulario.resultado1.value = Math.abs(num);
-				alert (Math.abs(num));
-	}
-	
-	function redondeaMas() {
-		var num = parseFloat(prompt("Ingrese número deseado"));
-		
+		function eje7() {
+			var texto = prompt("Ingrese un texto");
+			var letra = prompt("ingrese una letra")
+			var contador = 0;
+
+			for (var i = 0; i < texto.length; i++) {
+				if (texto.charAt(i) == letra)
+					contador++;
+			}
+			alert("La cantidad de letras " + letra + " es " + contador);
+		}
+		function eje8() {
+			var text = "Esta lloviendo en Juan Lacaze";
+			alert(text.substring(23, 29));
+		}
+		function eje9() {
+			var text = "Jose Artigas";
+			var nombre = text.split(" ")
+
+			alert(nombre[1] + ", " + nombre[0]);
+		}
+		function eje10() {
+			var contador = 0;
+
+			while (text != "fin") {
+				var text = prompt("Ingrese frases");
+				if (text != "fin")
+					contador++;
+			}
+			alert("Usted Ingerso: " + contador + " frases");
+		}
+		function eje11() {
+			var num = prompt("Ingrese su numero");
+			if (num.length == 3) {
+				alert("El valor ingresado es de 3 digitos");
+			} else
+				alert("El numer ingresado no tiene 3 digitos");
+		}
+
+		function absoluto() {
+			var num = parseFloat(prompt("Ingrese número deseado"));
+
+			document.formulario.resultado1.value = Math.abs(num);
+			alert(Math.abs(num));
+		}
+
+		function redondeaMas() {
+			var num = parseFloat(prompt("Ingrese número deseado"));
+
 			document.formulario.resultado2.value = Math.ceil(num);
-		
-	}
-	
-	function redondeaMenos() {
-		var num = parseFloat(prompt("Ingrese número deseado"));
-		
+
+		}
+
+		function redondeaMenos() {
+			var num = parseFloat(prompt("Ingrese número deseado"));
+
 			document.formulario.resultado3.value = Math.floor(num);
-		
-	}
-	
-	function maximo() {
-		var num1= parseInt(prompt("ingrese el primer valor"));
-		var num2= parseInt(prompt("ingrese el segundo valor"));
-		var num3= parseInt(prompt("ingrese el tercer valor"));
-		
-			document.formulario.resultado4.value =("Máximo: " + Math.max(num1,num2,num3));
-		
-	}
-	
-	function minimo() {
-		var num1= parseInt(prompt("ingrese el primer valor"));
-		var num2= parseInt(prompt("ingrese el segundo valor"));
-		var num3= parseInt(prompt("ingrese el tercer valor"));
-		
-			document.formulario.resultado5.value =("Mínimo: " + Math.min(num1,num2,num3));
-		
-	}
-	
-	function potencia() {
-		var num1= parseInt(prompt("ingrese el primer valor"));
-		var num2= parseInt(prompt("ingrese el segundo valor"));
-				
-			document.formulario.resultado6.value =(+num1 + " a la "+num2 + "= " + Math.pow(num1,num2));
-		
-	}
-	function redondeo() {
-		var num1= parseFloat(prompt("ingrese valor"));
-						
+
+		}
+
+		function maximo() {
+			var num1 = parseInt(prompt("ingrese el primer valor"));
+			var num2 = parseInt(prompt("ingrese el segundo valor"));
+			var num3 = parseInt(prompt("ingrese el tercer valor"));
+
+			document.formulario.resultado4.value = ("Máximo: " + Math.max(num1, num2, num3));
+
+		}
+
+		function minimo() {
+			var num1 = parseInt(prompt("ingrese el primer valor"));
+			var num2 = parseInt(prompt("ingrese el segundo valor"));
+			var num3 = parseInt(prompt("ingrese el tercer valor"));
+
+			document.formulario.resultado5.value = ("Mínimo: " + Math.min(num1, num2, num3));
+
+		}
+
+		function potencia() {
+			var num1 = parseInt(prompt("ingrese el primer valor"));
+			var num2 = parseInt(prompt("ingrese el segundo valor"));
+
+			document.formulario.resultado6.value = (+num1 + " a la " + num2 + "= " + Math.pow(num1, num2));
+
+		}
+		function redondeo() {
+			var num1 = parseFloat(prompt("ingrese valor"));
+
 			document.formulario.resultado7.value = Math.round(num1);
-		
-	}
+
+		}
 		function raiz() {
-		var num1= parseInt(prompt("ingrese valor"));
-						
+			var num1 = parseInt(prompt("ingrese valor"));
+
 			document.formulario.resultado8.value = Math.sqrt(num1);
-		
-	}
-	
-	function eje13(){
-		var respuesta = "";
-		var contador = 0;
-		for(var i = 1; i<101; i++){
-			if(i%2 == 0 && i%3 == 0){
-				respuesta += i+", ";
-				contador++;
+
+		}
+
+		function eje13() {
+			var respuesta = "";
+			var contador = 0;
+			for (var i = 1; i < 101; i++) {
+				if (i % 2 == 0 && i % 3 == 0) {
+					respuesta += i + ", ";
+					contador++;
+				}
+			}
+			alert("Numeros multiplos de 2 y 3: " + respuesta + " cantidad: " + contador);
+		}
+		function eje14() {
+			var num = prompt("Ingrese numero de 2 digitos");
+			var num1 = num.charAt(0);
+			var num2 = num.charAt(1);
+			var suma = parseInt(num1) + parseInt(num2);
+
+			alert("Su numero es: " + num + " y la suma de los dos digitos es " + suma);
+		}
+		function eje15() {
+			var minimo = 1;
+			var maximo = 3;
+			for (var i = 1; i < 7; i++) {
+				var num = Math.floor(Math.random() * (maximo - minimo)) + minimo;
+				if (num == 1) {
+					alert("es cara");
+				} else
+					alert("es numero");
 			}
 		}
-		alert("Numeros multiplos de 2 y 3: "+respuesta+" cantidad: "+contador);
-	}
-	function eje14(){
-		var num = prompt("Ingrese numero de 2 digitos");
-		var num1 = num.charAt(0);
-		var num2 = num.charAt(1);
-		var suma = parseInt(num1)+ parseInt(num2);
-		
-		alert("Su numero es: "+num+" y la suma de los dos digitos es "+suma);
-	}
-	function eje15(){
-		var minimo = 1;
-		var maximo = 3;
-		for(var i = 1; i<7; i++){
-			var num = Math.floor(Math.random() * (maximo - minimo)) + minimo;
-			if(num == 1){
-				alert("es cara");
-			}else
-				alert("es numero");
-		}	
-	}
-	function eje16(){
-		var resultado = "";
-		for(var j = 0; j<11; j++){
-			for(var i = 0; i<11; i++){
-				resultado += i+" "+i+" ";
+		function eje16() {
+			var resultado = "";
+			for (var j = 0; j < 11; j++) {
+				for (var i = 0; i < 11; i++) {
+					resultado += i + " " + i + " ";
+				}
+				resultado += " \n";
 			}
-		resultado += " \n";
+			alert(resultado);
 		}
-		alert(resultado);
-	}
-	function eje17(){
-		
-		for(var i = 0; i<11; i++){
-			var numeroJ = parseInt (prompt ("Ingrese entre el 1 y el 15 inclusive"));
-			var numeroA = Math.floor(Math.random() * (16-1) + 1)
-			
-			if(numeroJ == numeroA)
-				alert("!!Adivino el numero!!");
+		function eje17() {
+
+			for (var i = 0; i < 11; i++) {
+				var numeroJ = parseInt(prompt("Ingrese entre el 1 y el 15 inclusive"));
+				var numeroA = Math.floor(Math.random() * (16 - 1) + 1)
+
+				if (numeroJ == numeroA)
+					alert("!!Adivino el numero!!");
+				else
+					alert("No es el numero");
+			}
+		}
+		function eje18() {
+			var tope = parseInt(prompt("Ingrese un tope para Fibonacci"));
+
+			var a = 0;
+			var b = 1;
+			var c = 0;
+
+			var resultado = a + ", " + b;
+
+			for (var i = 3; i <= tope; i++) {
+				c = a + b;
+				resultado += ", " + c;
+				a = b;
+				b = c;
+			}
+			alert(resultado)
+		}
+		function eje19() {
+			var n = parseInt(prompt("Ingrese un numero"));
+			var factorial = 1;
+
+			for (var i = 1; i <= n; i++) {
+				factorial = factorial * i;
+			}
+			alert("El factorial de " + n + " es " + factorial);
+		}
+		function eje20() {
+			var primo = true;
+			var num = parseInt(prompt("Ingrese un numero"));
+
+			for (var i = 2; i < num; i++) {
+				if (num % i == 0) {
+					primo = false;
+				}
+			}
+			if (primo == true)
+				alert("Es un numero primo");
 			else
-				alert("No es el numero");
+				alert("No es un numero primo");
 		}
-	}
-	function eje18(){
-		var tope = parseInt (prompt("Ingrese un tope para Fibonacci"));
-		
-		var a = 0;
-		var b = 1;
-		var c = 0;
-		
-		var resultado = a + ", " + b;
-		
-		for(var i = 3; i<=tope; i++){
-			c = a + b;
-			resultado += ", " + c;
-			a = b;
-			b = c;
-		}
-		alert(resultado)
-	}
-	function eje19(){
-		var n = parseInt (prompt("Ingrese un numero"));
-		var factorial = 1;
-		
-		for(var i=1; i<=n; i++){
-			factorial = factorial * i;
-		}
-		alert("El factorial de "+n+" es "+factorial);
-	}
-	function eje20(){
-		var primo=true;
-		var num = parseInt (prompt("Ingrese un numero"));
-		
-		for(var i = 2; i<num; i++){
-			if(num %i == 0){
-			primo=false;
-			}
-		}	
-		if(primo==true)
-			alert("Es un numero primo");
-		else
-			alert("No es un numero primo");
-	}
 	</script>
-	
-	<body bgcolor="green">
-		<center>
-		<form name="formulario1">
-		<fieldset style="width:50%;">
+
+	<style>
+		* {
+			font-family: Verdana, Geneva, Tahoma, sans-serif;
+		}
+
+		body {
+			margin-top: 1rem;
+			background-color: green;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+
+		fieldset {
+			width: 50vw;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		#btnLimpiarEntradas {
+			text-align: center;
+		}
+
+		#letraRepartido {
+			text-align: justify;
+			margin: 5rem;
+			padding: 1rem 2rem 0 2rem;
+			border: 3px solid black;
+			background-color: ghostwhite;
+			color: black;
+		}
+		h3{
+			text-align: center;
+		}
+	</style>
+</head>
+
+<body>
+	<form name="formulario1">
+		<fieldset>
 			<legend>RESPARTIDO 3</legend>
-			<table align="center">
-			<tr>
-				<td>
-					<td><input type="button" value="Ejerciocio 1" onclick="eje1();"/></td>
-			</tr>
-			<tr>
-				<td>
-					<td><input type="button" value="Ejerciocio 2" onclick="eje2();"/></td>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<td><input type="button" value="Ejerciocio 3" onclick="eje3();"/></td>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<td><input type="button" value="Ejerciocio 4" onclick="eje4();"/></td>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<td><input type="button" value="Ejerciocio 5" onclick="eje5();"/></td>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<td><input type="button" value="Ejerciocio 6" onclick="eje6();"/></td>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<td><input type="button" value="Ejerciocio 7" onclick="eje7();"/></td>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<td><input type="button" value="Ejerciocio 8" onclick="eje8();"/></td>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<td><input type="button" value="Ejerciocio 9" onclick="eje9();"/></td>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<td><input type="button" value="Ejerciocio 10" onclick="eje10();"/></td>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<td><input type="button" value="Ejerciocio 11" onclick="eje11();"/></td>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<td><input type="button" value="Ejerciocio 12" onclick="eje12();"/></td>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<td><input type="button" value="Ejerciocio 13" onclick="eje13();"/></td>
-				</td>
-			</tr>
-			</tr>
-			<tr>
-				<td>
-					<td><input type="button" value="Ejerciocio 14" onclick="eje14();"/></td>
-				</td>
-			</tr>
-			</tr>
-			<tr>
-				<td>
-					<td><input type="button" value="Ejerciocio 15" onclick="eje15();"/></td>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<td><input type="button" value="Ejerciocio 16" onclick="eje16();"/></td>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<td><input type="button" value="Ejerciocio 17" onclick="eje17();"/></td>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<td><input type="button" value="Ejerciocio 18" onclick="eje18();"/></td>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<td><input type="button" value="Ejerciocio 19" onclick="eje19();"/></td>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<td><input type="button" value="Ejerciocio 20" onclick="eje20();"/></td>
-				</td>
-			</tr>
-		</table>
+			<table>
+				<tr>
+					<td>
+					<td><input type="button" value="Ejerciocio 1" onclick="eje1();" /></td>
+				</tr>
+				<tr>
+					<td>
+					<td><input type="button" value="Ejerciocio 2" onclick="eje2();" /></td>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<td><input type="button" value="Ejerciocio 3" onclick="eje3();" /></td>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<td><input type="button" value="Ejerciocio 4" onclick="eje4();" /></td>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<td><input type="button" value="Ejerciocio 5" onclick="eje5();" /></td>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<td><input type="button" value="Ejerciocio 6" onclick="eje6();" /></td>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<td><input type="button" value="Ejerciocio 7" onclick="eje7();" /></td>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<td><input type="button" value="Ejerciocio 8" onclick="eje8();" /></td>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<td><input type="button" value="Ejerciocio 9" onclick="eje9();" /></td>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<td><input type="button" value="Ejerciocio 10" onclick="eje10();" /></td>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<td><input type="button" value="Ejerciocio 11" onclick="eje11();" /></td>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<td><input type="button" value="Ejerciocio 12" onclick="eje12();" /></td>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<td><input type="button" value="Ejerciocio 13" onclick="eje13();" /></td>
+					</td>
+				</tr>
+				</tr>
+				<tr>
+					<td>
+					<td><input type="button" value="Ejerciocio 14" onclick="eje14();" /></td>
+					</td>
+				</tr>
+				</tr>
+				<tr>
+					<td>
+					<td><input type="button" value="Ejerciocio 15" onclick="eje15();" /></td>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<td><input type="button" value="Ejerciocio 16" onclick="eje16();" /></td>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<td><input type="button" value="Ejerciocio 17" onclick="eje17();" /></td>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<td><input type="button" value="Ejerciocio 18" onclick="eje18();" /></td>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<td><input type="button" value="Ejerciocio 19" onclick="eje19();" /></td>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<td><input type="button" value="Ejerciocio 20" onclick="eje20();" /></td>
+					</td>
+				</tr>
+			</table>
 		</fieldset>
-		</form>
-	</center>
-	<center>
-		<form name="formulario">
-		<fieldset style="width:40%;">								
-			<legend>EJERCICIO 12 REPARTIDO 3</legend> 			
-			<table align="center">
-			
-			
+	</form>
+
+	<form name="formulario">
+		<fieldset>
+			<legend>EJERCICIO 12 REPARTIDO 3</legend>
+			<table>
+
+
 				<tr>
 					<td><input type="button" value="Número Absoluto" onclick="absoluto();"></td>
 					<td><input type="text" id="resultado1"></td>
 				</tr>
-			
+
 				<tr>
 					<td><input type="button" value="Redondea +" onclick="redondeaMas();"></td>
 					<td><input type="text" id="resultado2"></td>
 				</tr>
-			
+
 				<tr>
 					<td><input type="button" value="Redondea -" onclick="redondeaMenos();"></td>
 					<td><input type="text" id="resultado3"></td>
 				</tr>
-						
+
 				<tr>
 					<td><input type="button" value="Máximo" onclick="maximo();"></td>
 					<td><input type="text" id="resultado4"></td>
 				</tr>
-				
+
 				<tr>
 					<td><input type="button" value="Mínimo" onclick="minimo();"></td>
 					<td><input type="text" id="resultado5"></td>
 				</tr>
-				
+
 				<tr>
 					<td><input type="button" value="Potencia" onclick="potencia();"></td>
 					<td><input type="text" id="resultado6"></td>
 				</tr>
-					
+
 				<tr>
 					<td><input type="button" value="Redondeo" onclick="redondeo();"></td>
 					<td><input type="text" id="resultado7"></td>
@@ -404,17 +442,57 @@
 					<td><input type="button" value="Raíz Cuadrada" onclick="raiz();"></td>
 					<td><input type="text" id="resultado8"></td>
 				</tr>
-				
+
 				<tr>
-					<td colspan="4" align="center"><input type="reset" value="Limpiar Entradas"></td> 
+					<td id="btnLimpiarEntradas" colspan="4"><input type="reset" value="Limpiar Entradas"></td>
 				</tr>
-				
-				
-				
+
 			</table>
 		</fieldset>
-		</form>
-		</center>
-	</body>
-	
+	</form>
+	<div id="letraRepartido">
+		<h3>Objetos String, Math y otras maldades…</h3>
+		<p>1. Escribir un script que permita el ingreso de una frase y muestre el largo dicha frase.</p>
+		<p>2. Escribir un script que permita el ingreso de una frase y sustituya los espacios en blanco por asteriscos.
+		</p>
+		<p> 3. Escribir un script que permita el ingreso de una frase y cuente la cantidad de letras “a” y “A” que
+			contenga.</p>
+		<p> 4. Escribir un script que permita el ingreso de una frase y cuente la cantidad de palabras ingresadas.</p>
+		<p>5. Escriba un script que permita el ingreso de 2 frases separadas y luego utilizando el concat() las muestre
+			juntas.</p>
+		<p>6. Escriba un script que solicite un texto e indicar cuantas vocales presenta.</p>
+		<p>7. Escriba un script que reciba un texto y una letra y decir cuántas veces esa letra aparece en el texto.</p>
+		<p> 8. Escriba un script que permita ingresar esta frase “está lloviendo en Juan Lacaze” y utilizando
+			substring()
+			mostrar la palabra “Lacaze”.</p>
+		<p>9. Escriba un script que permita ingresar “Jose Artígas” y utilizando split() muestre “Artígas, Jose”.</p>
+		<p>10. Escriba un script que permita introducir frases hasta que se introduzca la palabra “fin”, luego mostrar
+			la
+			cantidad de frases ingresadas.</p>
+		<p>11. Leer un número entero y determinar si tiene 3 dígitos.</p>
+		<p>12. Hacer un script que pruebe las funciones de la clase Math vistas en clase: abs(), ceil(), floor(),
+			max(),
+			min(), pow(), round() y sqrt().</p>
+		<p>13. Escriba un script que permita mostrar y contar los números que son múltiplos de 2 y de 3 al mismo tiempo
+			que
+			hay entre 1 y 100.</p>
+		<p>14. Leer un número entero de dos dígitos y determinar cuánto es la suma de sus dígitos.</p>
+		<p>15. Simular el lanzamiento de una moneda al aire y mostrar si ha salido numero o cara.</p>
+		<p>16. Escriba un script que permita mostrar diez veces la serie de números del 1 al 10.</p>
+		<p>17. Desarrolle un juego simple que pida al usuario que adivine un número en 10 intentos. El juego termina
+			cuando
+			se haya adivinado el número o cuando se hayan agotado todos los intentos.</p>
+		<p>18. Escriba un programa que dado un número tope muestre la sucesión de Fibonacci que comienza de esta
+			manera: 0,
+			1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89 …. Es decir, después del comienzo 0, 1 los números siguientes es la
+			suma de
+			los dos anteriores.</p>
+		<p>19. Escribir un programa que permita ingresar un número “n” y muestre su factorial. n! = (1 * 2 …* (n-1) *n).
+		</p>
+		<p>20. Un número primo es un entero cuyos divisores enteros son sólo 1 y el mismo número. Escriba un programa
+			que
+			reciba un número y escriba un mensaje si es número primo.</p>
+	</div>
+</body>
+
 </html>
